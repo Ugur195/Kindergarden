@@ -1,0 +1,148 @@
+main {
+    img {
+        cursor: pointer;
+    }
+
+    #img_item_1 {
+        img {
+            width: 100%;
+            height: 328px;
+        }
+
+        .wrapper {
+            position: relative;
+
+            .overlay {
+                @include overlay(absolute, 0, 0, 0, 0, 0, 100%, 100%, rgb(105, 105, 105));
+
+                .content {
+                    position: absolute;
+                    bottom: 10px;
+                    left: 45%;
+                    z-index: 5;
+                    transform: translate(-50%, -50%);
+
+                    p {
+                        a {
+                            z-index: 5;
+                            @include Parag(30px, 600, 21px, $white-color);
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                .overlay {
+                    opacity: 0.5;
+
+                    p {
+                        opacity: 1;
+                        color: white !important;
+                        z-index: 5;
+                    }
+                }
+            }
+        }
+    }
+
+    #img_item_2 {
+        img {
+            @include Img(100%, 350px, contain);
+        }
+    }
+
+    #img_item_3 {
+        img {
+            @include Img(100%, 350px, contain);
+        }
+    }
+
+    #img_item_4 {
+        img {
+            @include Img(100%, 461px, contain);
+        }
+    }
+
+    #img_item_5 {
+        .img_item_12 {
+            @include Img(100%, 400px, contain);
+        }
+
+        .img_item_13 {
+            @include Img(100%, 400px, contain);
+        }
+    }
+
+    #img_item_6 {
+        img {
+            @include Img(100%, 461px, contain);
+        }
+    }
+
+    #skewbox {
+        position: relative;
+        margin-top: 250px;
+
+        .skew {
+            display: flex;
+            @include skew(
+                absolute,
+                20%,
+                50%,
+                translate(-50%, -50%),
+                400px,
+                1200px,
+                white,
+                0 10px 30px rgba (0, 0, 0, 0.5)
+            );
+
+            @media screen and (max-width: 768px) {
+                width: 767px;
+            }
+        }
+
+        .content {
+            width: 50%;
+            background-color: white;
+            padding: 2% 5%;
+
+            .yay_geyim {
+                @include Parag(52px, 500, 50px, $text_gold);
+            }
+
+            .yay_geyim {
+                @include Parag(47px, 500, 55px, $text_gold);
+
+                span {
+                    @include Parag(48px, 500, 55px, $text_gold);
+                }
+            }
+
+            #endirim_al {
+                background-color: $btn_color;
+                line-height: 24px;
+                @include btn(20px, 180px, 56px, 20px, 500, 17px, transparent);
+            }
+        }
+
+        .imgbox1 {
+            width: 50%;
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 28% 100%);
+            object-fit: fill;
+        }
+    }
+
+    .imgbox {
+        width: 50%;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 42% 100%);
+    }
+}
+
+#geyim_magaza {
+    margin-top: 500px;
+    @media (max-width:400px) {
+        margin-top: 0;
+    }
+}
+
+// 157

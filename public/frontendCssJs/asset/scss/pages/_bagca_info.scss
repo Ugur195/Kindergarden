@@ -1,0 +1,106 @@
+main {
+    section {
+        #left_item {
+            img {
+                @include Img(100%, 500px, cover);
+                border-radius: 8px;
+            }
+
+            #left_text {
+                margin-top: 20px;
+                h1 {
+                    @include Parag(30px, 600, 30px, $black_color);
+                }
+                p {
+                    @include Parag(17px, 500, 20px, $black_color);
+                    padding: 8px 0;
+                }
+            }
+        }
+        .img_item {
+            gap: 20px;
+            display: flex;
+
+            .img_1 {
+                @include Img(270px, 257px, null);
+            }
+
+            .img_2 {
+                @include Img(100%, 233px, null);
+            }
+
+            .img_3 {
+                @include Img(100%, 200px, null);
+            }
+            #img_3{
+                @media (max-width:400px) {
+                    display: none;
+                }
+            }
+        }
+        .bagca_content {
+            @include Parag(17px, 500, 20.72px, $black_color);
+            padding: 14px 0;
+            @media screen and(max-width:768px) {
+                line-height: 34px;
+            }
+        }
+    }
+    #skewbox {
+        @media (max-width:400px) {
+            display: none;
+        }
+        position: relative;
+        margin-top: 250px;
+        .skew {
+            @include skew(
+                absolute,
+                20%,
+                50%,
+                translate(-50%, -50%),
+                400px,
+                1200px,
+                white,
+                0 10px 30px rgba (0, 0, 0, 0.5)
+            );
+            display: flex;
+        }
+
+        .content {
+            width: 50%;
+            background-color: white;
+            padding: 2% 5%;
+            h2 {
+                @include Parag(48px, 500, 50px, $text_red);
+                padding: 30px 0;
+                @media screen and (max-width: 768px) {
+                    font-size: 33px;
+                }
+            }
+            p {
+                @include Parag(81px, 500, 75px, $text_green);
+                span {
+                    @include Parag(48px, 500, 75px, $text_green);
+                }
+            }
+
+            #endirim_al {
+                background-color: $btn_color;
+                line-height: 24px;
+                @include btn(20px, 180px, 56px, 20px, 500, 17px, transparent);
+            }
+        }
+        .imgbox {
+            width: 50%;
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 42% 100%);
+        }
+    }
+}
+#bagca_footer {
+    margin-top: 100px;
+    @media (max-width:400px) {
+        margin: 0;
+    }
+}
+
+//110

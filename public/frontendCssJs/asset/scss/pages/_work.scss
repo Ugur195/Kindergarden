@@ -1,0 +1,90 @@
+  #work_main {
+  position: relative;
+  margin-top: 100px;
+  margin-left: 11%;
+  width: 80%;
+  height: auto;
+  background-color: white;
+  @media (max-width:400px) {
+    margin-left:5%;
+    width: 90%;
+  }
+  #work_info {
+    .work_melumat {
+      @media (max-width:768px) {
+        @include Flex(center,center,column);
+      }
+      margin-top: 50px;
+      h2 {
+        @include Parag(24px, 700, 20px, $black-color);
+        margin: 20px;
+      }
+
+      .work_content {
+        padding: 14px;
+        width: 320px;
+        border: 4.25px solid #656565;
+        margin: 20px 0  ;
+        border-radius: 4px;
+
+        @media (max-width:400){
+          width: 270px;
+        }
+
+        h3 {
+          @include Parag(22px, 600, 20px, $black-color);
+          padding: 10px 0px;
+        }
+        p {
+          @include Parag(14px, 600, 25px, $black-color);
+        }
+      }
+      .work_requirements {
+        padding: 10px 0;
+        .work_h3 {
+          @include Parag(17px, 600, 20px, $black-color);
+          padding: 10px;
+        }
+        p {
+          @include Parag(13px, 600, 18px, $black-color);
+        }
+      }
+
+      button {
+        margin: 10px 20px;
+        background-color: $btn_color;
+        line-height: 24px;
+        @include btn(null, 180px, 56px, 20px, 500, 4px, transparent);
+      }
+    }
+  }
+
+  .number {
+    @include Flex(center, center, row);
+    padding: 20px 0;
+    gap: 20px;
+    .num_one {
+      border: 1px solid black;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 10px;
+    }
+    span {
+      padding: 0 14px;
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  #saly {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    bottom: -40px;
+    right: -100px;
+    
+  }
+}
+
+

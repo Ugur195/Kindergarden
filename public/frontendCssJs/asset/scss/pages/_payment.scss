@@ -1,0 +1,60 @@
+main {
+    #payment_col {
+        border-radius: 4px;
+        width: 100%;
+        height: 450px;
+        background-color: white;
+    }
+
+    .cart_name {
+        padding: 20px 0;
+        input {
+            display: block;
+            width: 100%;
+            padding: 10px 8px;
+            margin-top: 20px;
+            border: 1.25px solid #9c999936;
+            border-radius: 4px;
+        }
+
+        .cvv {
+            gap: 20px;
+            input {
+                display: inline-block;
+                width: 40%;
+
+                &:nth-child(2) {
+                    margin-left: 20px;
+
+                    &::placeholder {
+                        padding: 0 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .right_img {
+        img {
+            @include Img(100%,400px,contain);
+            float: none;
+
+        }
+    }
+    .card {
+        border: none;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        img {
+            gap: 20px;
+            @include Img(60px,50px,contain);
+        }
+    }
+
+    button{
+        float: left;
+        background-color: $btn_color;
+        @include btn (20px,180px,56px,20px,500,17px,none);
+    }
+}

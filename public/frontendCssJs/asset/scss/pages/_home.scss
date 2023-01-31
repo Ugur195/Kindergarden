@@ -1,0 +1,656 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#overflow,#dubble_main{
+  overflow: hidden;
+}
+#proqres {
+  @include proqress(fixed, 20px, 10px, 70px, 70px, none, center, 50%, 0 0 10px rgba(0, 0, 0, 0.2));
+  cursor: pointer;
+  z-index: 555;
+  #progress_item {
+    @include p_item(block, calc(100% - 15px), calc(100% - 15px), #ffff, 50px, grid, center, 35px, #001a2e);
+  }
+}
+
+nav {
+  @include nav(fixed, 0, 0, 0, 55);
+  @include Flex(space-evenly, center, row);
+  .nav-menu {
+    padding: 30px 0;
+    width: 90%;
+    @include Flex(space-between, center, row);
+    .nav-item {
+      position: relative;
+      .nav-link {
+        @include Parag(17px, 500, 20px, $black-color);
+        text-transform: uppercase;
+        transition: 0.3s ease-in-out;
+        &:hover {
+          color: yellow;
+        }
+      }
+      
+    }
+  }
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 2;
+    .bar {
+      @include bar(block, 25px, 3px, 5px auto, all 0.3s ease-in-out, yellow);
+    }
+  }
+  .vector {
+    cursor: pointer;
+  }
+}
+.stiky {
+  background-color: teal;
+  color: black;
+  transition: 1s ease-in-out;
+}
+@media only screen and (max-width: 768px) {
+  nav {
+    @include Flex(space-around, center, row);
+    .navigation {
+      margin: 35px 0;
+    }
+    .hamburger {
+      display: block;
+    }
+    .active .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    .active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu {
+      position: fixed;
+      @include Flex(space-between, null, column);
+      @include nav_menu(50%, 100%, gray, 0px, -100%, 0.3s ease-in-out, 55);
+    }
+    .active {
+      left: 0;
+    }
+  }
+}
+
+
+#index_content {
+  @include Parag(40px, 600, 48px, $white_color);
+  display: flex;
+  justify-content: center;
+  padding-left: 33%;
+  margin-top: 100px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+#center_img {
+  width: 100%;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+main {
+  margin-top: 100px;
+  #kids_img_text {
+    width: 100%;
+    height: 1700px;
+    position: relative;
+
+    .baby_info {
+      @include Parag(30px, 600, 30px, $black-color);
+      padding: 0 50px;
+      position: absolute;
+      top: 290px;
+      @media (max-width: 400px) {
+        position: absolute;
+        top: 30px;
+      }
+    }
+    .relative_item {
+      position: relative;
+      .relative_img {
+        max-width: 100%;
+      }
+      .absaulte_text {
+        @include Flex(null, center, row);
+        position: absolute;
+        top: 66px;
+        left: 20px;
+
+        .text {
+          margin-left: 20px;
+          .text2 {
+            font-family: "Mali";
+            @include Parag(33px, 400, 60px, black);
+            @media (max-width: 400px) {
+              @include Parag(14px, 400, 23px, $black-color);
+            }
+          }
+        }
+        h2 {
+          font-family: "Mali";
+          @include Parag(38px, 600, 35px, $black-color);
+          @media (max-width: 400px) {
+            @include Parag(14px, 400, 0px, $black-color);
+          }
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+      @media screen and (max-width: 768px) {
+        .text {
+          padding: 20px 0;
+        }
+        .text2 {
+          @include Parag(18px, 500, 23px, $black-color);
+          text-align: center;
+        }
+        h2 {
+          @include Parag(24px, 600, 40px, $black-color);
+          text-align: center;
+        }
+      }
+    }
+
+    .pos {
+      margin-top: 70px;
+      cursor: pointer;
+      @media screen and (max-width: 393px) {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+      }
+    }
+    @media only screen and (min-width: 393px) {
+      .pos {
+        @include Img(100px, 100px, contain);
+        // width: 100px;
+        // height: 100px;
+        // object-fit: contain;
+
+      }
+      h2 {
+        line-height: 20px;
+      }
+      .text2 {
+        line-height: 5px;
+      }
+    }
+  }
+  #kids_img {
+    @include position(absolute, 300px, 0);
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    .img_item {
+      img {
+        display: block;
+        @include position(absolute, 550px, 50px);
+        @media (max-width: 400px) {
+          @include position(absolute, 250px, 5px);
+          @include Img(120px, 150px, contain);
+        }
+      }
+    }
+    .img_item_1 {
+      @include position(absolute, 415px, 290px);
+      img {
+        display: block;
+        margin-top: 20px;
+        @media (max-width: 400px) {
+          @include Img(120px, 150px, contain);
+        }
+      }
+      @media (max-width: 400px) {
+        @include position(absolute, 250px, 120px);
+      }
+      @media screen and (max-width: 768px) {
+        .img_none {
+          display: none;
+        }
+      }
+    }
+    .img_item_2 {
+      @include position(absolute, 190px, 520px);
+      img {
+        display: block;
+        @media screen and (max-width: 400px) {
+          @include Img(120px, 150px, contain);
+        }
+      }
+      @media screen and (max-width: 400px) {
+        @include position(absolute, 280px, 250px);
+
+        #img_none {
+          display: none;
+        }
+      }
+    }
+    .img_item_3 {
+      position: absolute;
+      right: 516px;
+      top: 113px;
+      img {
+        display: block;
+        margin-top: 20px;
+        @media screen and (max-width: 400px) {
+          @include Img(120px, 150px, contain);
+        }
+      }
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    .img_item_4 {
+      position: absolute;
+      right: 270px;
+      top: -90px;
+      img {
+        display: block;
+        margin-top: 20px;
+      }
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+    .img_item_5 {
+      position: absolute;
+      right: 15px;
+      top: 63px;
+      img {
+        display: block;
+        margin-top: 20px;
+      }
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+}
+
+#dubble_main{
+  #rotate_text {
+    display: flex;
+    .relative {
+      position: relative;
+  
+      .position_text {
+        @include rotate_text(absolute, -10px, -100px);
+        .class {
+          display: flex;
+          align-items: center;
+          div {
+            @include div(27px 4px, 15px, 15px, rgba(255, 166, 0, 0.82), 10px);
+          }
+          p {
+            @include Parag(24px, 500, 24px, $white_color);
+          }
+        }
+      }
+  
+      .position_text1 {
+        @include rotate_text(absolute, 50px, -26px);
+        .class {
+          display: flex;
+          align-items: center;
+          div {
+            @include div(27px 4px, 15px, 15px, green, 10px);
+          }
+          p {
+            @include Parag(24px, 500, 24px, $white_color);
+          }
+        }
+      }
+      .position_text2 {
+        @include rotate_text(absolute, 110px, 187px);
+        .class {
+          display: flex;
+          align-items: center;
+          div {
+            @include div(27px 4px, 15px, 15px, red, 10px);
+          }
+          p {
+            @include Parag(24px, 500, 24px, $white_color);
+          }
+        }
+      }
+      .position_text3 {
+        @include rotate_text(absolute, 168px, 223px);
+        .class {
+          display: flex;
+          align-items: center;
+          div {
+            @include div(27px 4px, 15px, 15px, blue, 10px);
+          }
+          p {
+            @include Parag(24px, 500, 24px, $white_color);
+          }
+        }
+      }
+      .position_text4 {
+        @include rotate_text(absolute, 220px, 140px);
+        .class {
+          display: flex;
+          align-items: center;
+          div {
+            @include div(27px 4px, 15px, 15px, pink, 10px);
+          }
+          p {
+            @include Parag(24px, 500, 24px, $white_color);
+          }
+        }
+      }
+      .position_text5 {
+        @include rotate_text(absolute, 265px, 145px);
+        .class {
+          display: flex;
+          align-items: center;
+          div {
+            @include div(27px 4px, 15px, 15px, rgb(100, 209, 100), 10px);
+          }
+          p {
+            @include Parag(24px, 500, 24px, $white_color);
+          }
+        }
+      }
+      .position_text7 {
+        @include rotate_text(absolute, 320px, -44px);
+        .class {
+          display: flex;
+          align-items: center;
+          div {
+            @include div(27px 4px, 15px, 15px, rgb(0, 53, 128), 10px);
+          }
+          p {
+            @include Parag(24px, 500, 24px, $white_color);
+          }
+        }
+      }
+      .position_text8 {
+        @include rotate_text(absolute, 375px, -195px);
+        .class {
+          display: flex;
+          align-items: center;
+          div {
+            @include div(27px 4px, 15px, 15px, rgb(58, 0, 128), 10px);
+          }
+          p {
+            @include Parag(24px, 500, 24px, $white_color);
+          }
+        }
+      }
+      .position_text9 {
+        @include rotate_text(absolute,426px, -145px);
+        .class {
+          display: flex;
+          align-items: center;
+          div {
+            @include div(27px 4px, 15px, 15px, rgb(125, 148, 125), 10px);
+          }
+          p {
+            @include Parag(24px, 500, 24px, $white_color);
+          }
+        }
+      }
+      .position_text10 {
+        @include rotate_text(absolute, 475px, -155px);
+        .class {
+          display: flex;
+          align-items: center;
+          div {
+            @include div(27px 4px, 15px, 15px, rgb(128, 128, 0), 10px);
+          }
+          p {
+            @include Parag(24px, 500, 24px, $white_color);
+          }
+        }
+      }
+      .absoulte {
+        position: absolute;
+        bottom: -20px;
+      }
+    }
+  
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  #kinder_garden {
+    margin-top: 100px;
+    .bagca_info {
+      img {
+        width: 100%;
+        border-radius: 8px;
+      }
+  
+      p {
+        @include Parag(23px, 500, 26px, $black-color);
+      }
+      .bagca {
+        @include Parag(13px, 500, 16px, $black-color);
+        padding: 8px 0;
+      }
+    }
+  
+    button {
+      background-color: $btn_color;
+      float: right;
+      @include btn(null, 180px, 56px, null, null, 17px, none);
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  #work_list {
+    padding-top: 100px;
+    .work_img {
+      position: relative;
+  
+      #work_sekil {
+        width: 100%;
+      }
+  
+      .work_text {
+        position: absolute;
+        top: 5%;
+        left: 10%;
+        z-index: 5;
+  
+        h2 {
+          @include Parag(45px, 700, 56px, $white_color);
+          @media (max-width:400px) {
+            font-size:25px;
+            line-height: 35px;
+          }
+        }
+        p {
+          @include Parag(45px, 500, 56px, $white_color);
+          @media (max-width:400px) {
+            font-size:25px;
+            line-height: 35px;
+          }
+        }
+  
+        button {
+          background-color: $btn_color;
+          margin: 20px 0;
+          @include btn(null, 180px, 56px, null, null, 17px, none);
+          @media (max-width:400px) {
+            width: 150px;
+          }
+        }
+      }
+    }
+  }
+  #employee {
+    .isciler {
+      img {
+        @include Img(100%,326px,contain);
+      }
+  
+      .isci_info {
+        @include isci_info(100%,50px,linear-gradient(180deg, rgba(255, 255, 255, 0.2) 15.87%, rgba(105, 112, 115, 0.02) 230.16%),0px 0px 3.33333px 3.33333px);
+        p {
+          text-align: center;
+          @include Parag(17px, 500, 20px, $black-color);
+          margin: 4px 0;
+        }
+      }
+    }
+    .logoped_title {
+      @include Parag(40px, 600, 48px, $black_color);
+      @media (max-width:768px) {
+        font-size: 35px;
+        max-width: 400px;
+      }
+    }
+  }
+  section {
+    #img_div {
+      margin-top: 100px;
+      img {
+        cursor: pointer;
+        width: 100%;
+        height: 300px;
+        border-radius: 8px;
+      }
+      .img1 {
+        @include Img(100%,350px, null);
+     
+      }
+  
+      #none{
+        @media  (max-width:768px) {
+          display: none;
+        }
+      }
+      #btn {
+        .right_btn {
+          @include btn_second(180px,50px,$btn_color,58% 40px,none,17px);
+          @include Parag(20px, 500, 24px, #000000);
+          @media screen and (max-width: 768px) {
+            margin: 20px 0;
+          }
+        }
+      }
+    }
+  }
+}
+#sviper {
+  margin-top: 100px;
+  display: none;
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-pagination-bullet:active {
+    background-color: white;
+  }
+
+  .swiper-slide {
+    overflow: hidden;
+    outline: 0 !important;
+    text-align: center;
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #swiper_pages {
+    margin-top: 20px;
+  }
+}
+#modal {
+  .modal-content {
+    width: 840px;
+    height: 700px;
+    margin-left: -200px;
+    @media (max-width:400px) {
+      width: 580px;
+      height: 1000px;
+      margin-left: 0;
+    }
+  }
+  .modal-body {
+    h2 {
+      display: flex;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 30px;
+      @media (max-width:400px) {
+        display: flex;
+        justify-content: start;
+      }
+    }
+    .modal_form {
+      form {
+        width: 100%;
+        height: 500px;
+        @include Flex(center, start, column);
+        input {
+          width: 345px;
+          height: 50px;
+          display: block;
+          margin-top: 14px;
+          padding: 4px 14px;
+          border: 1.25px solid #d9d9d9b2;
+        }
+        h3 {
+          font-weight: 700;
+        }
+      }
+    }
+    .left_item {
+      img {
+        width: 258px;
+        height: 211px;
+      }
+
+      button {
+        height: 50px;
+        background-color: $btn_color;
+        margin: 50px;
+        border: none;
+        border-radius: 4px;
+        @include Parag(20px, 500, 24px, #000000);
+      }
+    }
+  }
+}
+
+#loader {
+  @include Flex(center, center, null);
+  @include Loader(fixed, 0, 0, white, 100%, 100%);
+}
+
+// 680

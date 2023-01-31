@@ -1,0 +1,208 @@
+#cv_item {
+    margin: 100px 50px;
+    border: none;
+}
+
+main {
+    #lg_3 {
+        margin-left: 50px;
+    }
+    .box {
+      
+        height: 322px;
+        width: 282px;
+        border-radius: 4px;
+        background-color: white;
+        @include Flex(center, center, column);
+        p {
+            padding: 0;
+            margin: 0;
+            @include Parag(30px, 500, 37px, $black-color);
+        }
+  
+    }
+
+    .id {
+        width: 100%;
+        height: auto;
+        background-color: white;
+        @media (max-width:768px) {
+            margin-top: 10%;
+        }
+        form {
+            padding: 30px 20px;
+            .form_name {
+                display: flex;
+                gap: 25px;
+                @media (max-width: 400px) {
+                    display: block;
+                }
+                input {
+                    
+                    border: 1.25px solid #d9d9d9b2;
+                    border-radius: 4px;
+                    @media (max-width: 400px) {
+                        display: block;
+                    }
+                }
+            }
+
+            .mobile {
+                padding: 20px 0;
+                input {
+                    margin: 12px 10px;
+                    // margin-top: 12px;
+                    border: 1.25px solid #d9d9d9b2;
+                    border-radius: 4px;
+
+                    &::placeholder {
+                        font-weight: 500;
+                        color: black;
+                    }
+                    @media (max-width:400px) {
+                        display: block;
+                        margin: 12px 0;
+                    }
+                }
+            }
+            .email {
+                input {
+                    width: 30%;
+                    margin: 12px 10px;
+                    border: 1.25px solid #d9d9d9b2;
+                    border-radius: 4px;
+                }
+            }
+            .gender {
+                padding: 16px 0;
+                display: flex;
+                gap: 20px;
+                input {
+                    margin: 12px 10px;
+                    width: 150px;
+                    border: 1.25px solid #d9d9d9b2;
+                    border-radius: 4px;
+                    @media (max-width:400px) {
+                        margin: 12px 0;
+                    }
+                }
+            }
+            .school {
+                input {
+                    margin: 12px 10px;
+                    width: 400px;
+                    border: 1.25px solid #d9d9d9b2;
+                    border-radius: 4px;
+                    @media (max-width: 400px) {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .work {
+                display: flex;
+                flex-direction: column;
+                padding: 20px 0;
+                textarea {
+                    width: 40%;
+                    border-radius: 4px;
+                    resize: none;
+                    @media (max-width: 400px) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    #cv_btn {
+        float: right;
+        margin-right: 12%;
+        background-color: $btn_color;
+        line-height: 24px;
+        @include btn(20px, 180px, 56px, 20px, 500, 17px, transparent);
+    }
+}
+
+#cv_footer {
+    margin-top: 200px;
+    #bagca_footer {
+        height: 56px;
+        width: 179px;
+        cursor: pointer;
+        padding: 0 8px;
+    }
+
+    .footer_link {
+        ul {
+            li {
+                @include Parag(15px, 400, 18px, $black-color);
+                padding: 8px 12px;
+            }
+        }
+    }
+
+    .mobil {
+        a {
+            display: block;
+            @include Parag(15px, 400, 18px, $black-color);
+            padding: 8px 0;
+        }
+        p {
+            padding: 8px 0;
+        }
+    }
+
+    .registration {
+        cursor: pointer;
+        p {
+            @include Parag(15px, 400, 18px, $black-color);
+            padding: 8px 0;
+        }
+    }
+
+    .vakansiya {
+        cursor: pointer;
+        p {
+            @include Parag(15px, 400, 18px, $black-color);
+            padding: 8px 0;
+        }
+    }
+    .position {
+        form {
+            position: relative;
+         
+            input {
+                background-color: gray;
+                box-shadow: none;
+                border-radius: 4px;
+
+                &::placeholder {
+                    color: $black-color !important;
+                    opacity: 1;
+                }
+            }
+            div {
+                position: absolute;
+                top: 3px;
+                right: 5px;
+                z-index: 5;
+            }
+        }
+        
+    }
+
+    .social_icon {
+        width: 100%;
+
+        p {
+            @include Parag(15px, 400, 18px, $black-color);
+        }
+        img {
+            float: right;
+            padding: 0 14px;
+        }
+    }
+}
+
+// 187

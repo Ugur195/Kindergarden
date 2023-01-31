@@ -1,0 +1,210 @@
+// home
+@media screen and (max-width: 768px) {
+    main {
+        #kids_img_text {
+            height: 1300px;
+
+            @media (max-width:400px) {
+                height: 615px;
+            }
+        }
+        .baby_info {
+            margin-bottom: 150px;
+        }
+
+        #kinder_garden {
+            display: none;
+        }
+    }
+
+  #employee{
+    img{
+        width: 100%;
+        height: 320px;
+        object-fit: contain;
+    }
+  }
+    #response_class {
+        display: flex;
+        justify-content: flex-end;
+    }
+    #kinder_garden {
+        .bagca_info {
+            p {
+                @include Parag(17px, 500, 26px, $black-color);
+                text-align: center;
+            }
+        }
+
+        button {
+            display: none;
+        }
+    }
+    .position {
+        display: none;
+    }
+    .registration {
+        padding: 0 12px;
+    }
+    #sviper {
+        display: block;
+    }
+    #img_div {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+
+// bagcalar
+
+@media screen and (max-width: 768px) {
+    #skewbox {
+        .skew {
+            width: 770px;
+        }
+    }
+
+    #kinder_garden_info {
+        display: none;
+    }
+
+    #kinder_garden_mobil {
+        display: block;
+    }
+}
+@media screen and (max-width: 768px) {
+    #img_div {
+        margin-top: 0;
+    }
+    #btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+    }
+}
+
+// bagca_info
+
+@media screen and (max-width: 768px) {
+    .img_1 {
+        display: none;
+    }
+    .img_2 {
+        display: none;
+    }
+}
+
+// conntact
+
+@media screen and (max-width: 768px) {
+}
+
+// cv
+@media screen and (max-width: 768px) {
+    main {
+        #lg_3 {
+            margin-left: 0;
+        }
+    }
+    select {
+        margin-left: 0 !important;
+    }
+}
+
+// geyim magazalari
+
+@media screen and (max-width: 768px) {
+    main {
+        #img_item_2 {
+            img {
+                object-fit: cover;
+            }
+        }
+        #img_item_3 {
+            img {
+                object-fit: cover;
+            }
+        }
+        #img_item_4 {
+            img {
+                object-fit: cover;
+            }
+        }
+        #img_item_6 {
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+// magaza
+
+@media screen and (max-width: 768px) {
+    #img_box {
+        .img_box {
+            display: none;
+        }
+    }
+    .btn {
+        button {
+            display: none;
+        }
+    }
+}
+
+// payment
+
+@media screen and (max-width: 768px) {
+    .right_img {
+        img {
+            display: none;
+        }
+    }
+}
+
+// work
+
+@media screen and (max-width: 768px) {
+    .work_delete {
+        display: none;
+    }
+
+    .number {
+        display: none;
+    }
+
+    #work_main {
+        position: relative;
+        #saly {
+            position: absolute;
+            right: 0;
+            bottom: -30px;
+        }
+    }
+}
+
+// work_info
+
+@media screen and (max-width: 768px) {
+    .work_footer {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// xadime
+
+@media screen and (max-width: 768px) {
+    #employee {
+        .text {
+            @include Flex(start, start, column);
+        }
+    }
+}
+
+// contact 
+

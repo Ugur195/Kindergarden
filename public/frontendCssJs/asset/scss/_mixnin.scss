@@ -1,0 +1,181 @@
+@mixin Flex($j-content, $items, $flex-d) {
+    display: flex;
+    justify-content: $j-content;
+    align-items: $items;
+    flex-direction: $flex-d;
+}
+
+@mixin Parag($f-size, $f-weight, $l-height, $color) {
+    font-size: $f-size;
+    font-weight: $f-weight;
+    line-height: $l-height;
+    color: $color;
+}
+
+@mixin Img($width, $height, $o_fit) {
+    width: $width;
+    height: $height;
+    object-fit: $o_fit;
+}
+
+@mixin btn($m_top, $width, $height, $f-size, $f-weight, $b-radius, $border) {
+    margin-top: $m_top;
+    width: $width;
+    height: $height;
+    font-size: $f-size;
+    font-weight: $f-weight;
+    border-radius: $b-radius;
+    border: $border;
+}
+
+@mixin Input($border, $width, $height, $bg-color, $color, $b-radius, $padd, $outline) {
+    border: $border;
+    width: $width;
+    height: $height;
+    background-color: $bg-color;
+    color: $color;
+    border-radius: $b-radius;
+    padding: $padd;
+    outline: $outline;
+}
+
+@mixin test($bg, $color) {
+    background: $bg;
+    color: $color;
+}
+
+@mixin select($margin, $width, $padd, $bg-clr, $clr, $f-size, $f-weight) {
+    margin: $margin;
+    width: $width;
+    padding: $padd;
+    background-color: $bg-clr;
+    color: $clr;
+    font-size: $f-size;
+    font-weight: $f-weight;
+}
+@mixin skew($posi, $top, $left, $trans, $height, $width, $bg-clr, $box-sha) {
+    position: $posi;
+    top: $top;
+    left: $left;
+    transform: $trans;
+    height: $height;
+    width: $width;
+    background-color: $bg-clr;
+    box-shadow: $box-sha;
+}
+
+@mixin textarea($m-left, $m-top, $padd, $b-radius, $f-size, $f-weight) {
+    margin-left: $m-left;
+    margin-top: $m-top;
+    padding: $padd;
+    border-radius: $b-radius;
+    font-size: $f-size;
+    font-weight: $f-weight;
+}
+
+@mixin overlay($pos, $top, $left, $right, $bottom, $opacity, $height, $width, $bg_color) {
+    position: $pos;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+    opacity: $opacity;
+    height: $height;
+    width: $width;
+    background-color: $bg_color;
+}
+
+@mixin bar($disp, $width, $height, $mar, $tran, $bg) {
+    display: $disp;
+    width: $width;
+    height: $height;
+    margin: $mar;
+    transition: $tran;
+    background-color: $bg;
+}
+
+@mixin nav_menu($wid, $heig, $bg, $top, $left, $trans, $z-index) {
+    width: $wid;
+    height: $heig;
+    background-color: $bg;
+    top: $top;
+    left: $left;
+    transition: $trans;
+    z-index: $z-index;
+}
+@mixin position($absa, $top, $left) {
+    position: $absa;
+    top: $top;
+    left: $left;
+}
+
+@mixin rotate_text($pos, $top, $right) {
+    position: $pos;
+    top: $top;
+    right: $right;
+}
+
+@mixin div($margin, $wid, $heig, $bg, $b-radius) {
+    margin: $margin;
+    width: $wid;
+    height: $heig;
+    background-color: $bg;
+    border-radius: $b-radius;
+}
+
+@mixin Loader($posit, $top, $left, $bg, $hegt, $wid) {
+    position: $posit;
+    top: $top;
+    left: $left;
+    background: $bg;
+    height: $hegt;
+    width: $wid;
+}
+
+@mixin proqress($pos, $btm, $right, $height, $wid, $disp, $p_items, $b-radius, $b-shadow) {
+    position: $pos;
+    bottom: $btm;
+    right: $right;
+    height: $height;
+    width: $wid;
+    display: $disp;
+    place-items: $p_items;
+    border-radius: $b-radius;
+    box-shadow: $b-shadow;
+}
+
+@mixin p_item($disp, $heig, $wid, $bg, $b-radius, $display, $p_items, $f_size, $clr) {
+    display: $disp;
+    height: $heig;
+    width: $wid;
+    background-color: $bg;
+    border-radius: $b-radius;
+    display: $display;
+    place-items: $p_items;
+    font-size: $f_size;
+    color: $clr;
+}
+
+@mixin nav ($pos,$top,$left,$rght,$z-index) {
+    position: $pos;
+    top: $top;
+    left: $left;
+    right: $rght;
+    z-index: $z-index;
+}
+
+@mixin isci_info ($wid,$heig,$bg,$br)  {
+    width: $wid;
+    height: $heig;
+    background: $bg;
+    border-radius: $br;
+}
+
+@mixin  btn_second ($wid,$heig,$bg,$margin,$border,$br) {
+    width: $wid;
+    height: $heig;
+    background-color: $bg;
+    margin: $margin;
+    border: $border;
+    border-radius: $br;
+}

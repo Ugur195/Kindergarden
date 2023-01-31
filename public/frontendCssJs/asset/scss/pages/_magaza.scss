@@ -1,0 +1,83 @@
+main {
+    #magaza_box {
+        display: flex;
+        img {
+            @include Img(100%, 400px, cover);
+            border-radius: 4px;
+        }
+        #text_item {
+            h2 {
+                @include Parag(24px, 500, 20px, $black_color);
+                padding: 12px 0;
+                cursor: pointer;
+            }
+            p {
+                @include Parag(20px, 400, 25px, $black_color);
+                padding: 8px 0;
+                cursor: pointer;
+            }
+        }
+        .img_item {
+            display: flex;
+            justify-content: end;
+
+            .right_img {
+                @include Img(100%, auto, contain);
+                @media (max-width:400px){
+                    display: none;
+                }
+            }
+        }
+    }
+    #img_box {
+        .img_item {
+            padding: 0 20px;
+            gap: 20px;
+            .img_box1 {
+                @include Img(600px, 300px, contain);
+            }
+            .img_box2 {
+                @include Img(345px, 260px, cover);
+                border-radius: 4px;
+            }
+            .img_box3 {
+                @include Img(480px, 470px, cover);
+                border-radius: 4px;
+            }
+            .img_box4 {
+                @include Img(470px, 470px, cover);
+                border-radius: 4px;
+                gap: 20px;
+            }
+
+            .flex {
+                img {
+                    padding-top: 20px;
+                }
+                .btn {
+                    @include Flex(center, center, row);
+                    button {
+                        background-color: $btn_color;
+                        float: right;
+                        @include btn(30%, 180px, 56px, null, null, 17px, none);
+                    }
+                }
+            }
+            @media screen and (max-width: 768px) {
+                .img_box1,
+                .img_box3,
+                .img_box4 {
+                    width: 100%;
+                    object-fit: cover;
+                    margin-top: 20px;
+                    height: 300px;
+                }
+                .img_box2 {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+// 102

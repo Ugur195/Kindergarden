@@ -1,0 +1,100 @@
+main {
+    h1 {
+        @include Parag(30px, 600, 37px, $black-color);
+    }
+    .about_p {
+        margin-top: 24px;
+        @include Parag(18px, 400, 27px, $black-color);
+        @media screen and (max-width:768px) {
+            line-height: 33px;
+        }
+    
+    }
+
+    .img_35 {
+        float: right;
+        @include Img(70%, 676px, contain);
+        @media screen and (max-width: 768px){
+            height: 300px;
+        }
+    }
+   
+}
+
+footer {
+    #bagca_footer {
+        height: 56px;
+        width: 179px;
+        cursor: pointer;
+        padding: 0 8px;
+    }
+
+    .footer_link {
+        ul {
+            li {
+                @include Parag(15px, 400, 18px, $black-color);
+                padding: 8px 12px;
+            }
+        }
+    }
+
+    .mobil {
+        a {
+            display: block;
+            @include Parag(15px, 400, 18px, $black-color);
+            padding: 8px 0;
+        }
+        p {
+            padding: 8px 0;
+        }
+    }
+
+    .registration {
+        cursor: pointer;
+        p {
+            @include Parag(15px, 400, 18px, $black-color);
+            padding: 8px 0;
+        }
+    }
+
+    .vakansiya {
+        cursor: pointer;
+        p {
+            @include Parag(15px, 400, 18px, $black-color);
+            padding: 8px 0;
+        }
+    }
+    .position {
+        form {
+            position: relative;
+            input {
+                background-color: gray;
+                box-shadow: none;
+                border-radius: 4px;
+
+                &::placeholder {
+                    color: $black-color !important;
+                    opacity: 1;
+                }
+            }
+            div {
+                position: absolute;
+                top: 3px;
+                right: 5px;
+                z-index: 5;
+            }
+        }
+    }
+
+    .social_icon {
+        width: 100%;
+
+        p {
+            @include Parag(15px, 400, 18px, $black-color);
+        }
+        img {
+            float: right;
+            padding: 0 14px;
+        }
+    }
+}

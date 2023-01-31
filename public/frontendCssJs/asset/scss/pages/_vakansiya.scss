@@ -1,0 +1,48 @@
+main {
+    #vakansiyalar {
+        .text {
+            @include Flex(end, end, column);
+            gap: 20px;
+            h2 {
+                @include Parag(20px, 600, 24px, $black-color);
+            }
+            button {
+                margin-right: 140px;
+                background-color: $btn_color;
+                @include btn(null, 130px,36px, null, null, 50px, 1px solid transparent);
+            }
+        }
+    }
+    #teacher_content {
+        display: flex;
+        @media (max-width:400px) {
+            display: block;
+    
+        }
+    
+        img {
+            height: 314px;
+            width: 263px;
+            border-radius: 4px;
+        }
+    
+        h2 {
+            padding: 12px 20px;
+            @include Parag(30px, 500, 37px, $black-color);
+        }
+        .btn_info {
+            background-color: $btn_color;
+            padding: 0 20px;
+            line-height: 20px;
+            @include btn(null, 130px, 36px, 16px, 600, 50px, none);
+    
+        }
+    
+        button {
+            background-color: transparent;
+            line-height: 20px;
+            margin-left: 20px;
+            @include btn(null, 130px, 36px, 16px, 600, 50px,  1px solid #f3ea00);
+        }
+    }
+}

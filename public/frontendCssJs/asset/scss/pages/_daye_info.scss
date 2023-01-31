@@ -1,0 +1,23 @@
+#daye_info{
+    margin-top: 100px;
+    .text1{
+        @include Parag (17px,400, 25px,$black_color);
+        padding: 14px 0;
+    }
+    .text5{
+        @include Parag (20px,400, 25px,$black_color);
+        padding: 8px 0;
+        text-align: start;
+    }
+
+ .center_img{
+    width: 900px;
+    height: 630px;
+    float: right;
+
+    @media screen and (max-width: 768px){
+        width: 100%;
+        object-fit: contain;
+    }
+ }   
+}
