@@ -21,7 +21,7 @@ class VacancyController extends Controller
 
     public function create(): View
     {
-        return view('frontend.vacancy.store');
+        return view('frontend.vacancy.create');
     }
 
     public function store(CvRequest $request)

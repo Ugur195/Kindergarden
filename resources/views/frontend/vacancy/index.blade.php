@@ -13,7 +13,7 @@
                             Məlumatları dolduraraq öz <br/>
                             CVni yerləşdir.
                         </h2>
-                        <button><a href="{{route('frontend.vacancies.store')}}">CV yarat</a></button>
+                        <button><a href="{{route('frontend.vacancies.create')}}">CV yarat</a></button>
                     </div>
                 </div>
             </div>
